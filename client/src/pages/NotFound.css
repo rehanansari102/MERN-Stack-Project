@@ -1,0 +1,430 @@
+/* Main container */
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dark Header Section */
+.not-found-header {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&h=1080&fit=crop&auto=format') center/cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: relative;
+}
+
+.header-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  opacity: 0.8;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.error-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Light Content Section */
+.not-found-content {
+  flex: 1;
+  background: #e8f5e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.content-wrapper {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Nature Illustration */
+.nature-illustration {
+  position: relative;
+  height: 300px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mountains */
+.mountains {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 150px;
+}
+
+.mountain {
+  position: absolute;
+  bottom: 0;
+  background: #d4e6d4;
+  border: 2px solid #2c3e50;
+}
+
+.mountain-1 {
+  left: 10%;
+  width: 80px;
+  height: 80px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.mountain-2 {
+  left: 30%;
+  width: 120px;
+  height: 100px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.mountain-3 {
+  right: 20%;
+  width: 100px;
+  height: 90px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Trees */
+.trees {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+}
+
+.tree {
+  position: absolute;
+  bottom: 0;
+}
+
+.tree::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 30px;
+  background: #2c3e50;
+}
+
+.tree::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #4a6741;
+}
+
+.tree-1 {
+  left: 15%;
+}
+
+.tree-2 {
+  left: 25%;
+}
+
+.tree-3 {
+  left: 45%;
+}
+
+.tree-4 {
+  right: 25%;
+}
+
+.tree-5 {
+  right: 15%;
+}
+
+/* Clouds */
+.clouds {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+.cloud {
+  position: absolute;
+  background: #2c3e50;
+  border-radius: 20px;
+  opacity: 0.7;
+}
+
+.cloud::before {
+  content: '';
+  position: absolute;
+  background: #2c3e50;
+  border-radius: 20px;
+}
+
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: #2c3e50;
+  border-radius: 20px;
+}
+
+.cloud-1 {
+  left: 10%;
+  width: 40px;
+  height: 20px;
+}
+
+.cloud-1::before {
+  top: -10px;
+  left: 10px;
+  width: 30px;
+  height: 20px;
+}
+
+.cloud-1::after {
+  top: -5px;
+  right: 10px;
+  width: 25px;
+  height: 15px;
+}
+
+.cloud-2 {
+  left: 50%;
+  width: 35px;
+  height: 18px;
+}
+
+.cloud-2::before {
+  top: -8px;
+  left: 8px;
+  width: 25px;
+  height: 18px;
+}
+
+.cloud-2::after {
+  top: -4px;
+  right: 8px;
+  width: 20px;
+  height: 12px;
+}
+
+.cloud-3 {
+  right: 15%;
+  width: 30px;
+  height: 15px;
+}
+
+.cloud-3::before {
+  top: -6px;
+  left: 6px;
+  width: 20px;
+  height: 15px;
+}
+
+.cloud-3::after {
+  top: -3px;
+  right: 6px;
+  width: 18px;
+  height: 10px;
+}
+
+/* Birds */
+.birds {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 40px;
+}
+
+.bird {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+}
+
+.bird::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 5px solid #2c3e50;
+}
+
+.bird-1 {
+  left: 20%;
+  animation: fly 4s ease-in-out infinite;
+}
+
+.bird-2 {
+  left: 60%;
+  animation: fly 4s ease-in-out infinite 1s;
+}
+
+.bird-3 {
+  right: 20%;
+  animation: fly 4s ease-in-out infinite 2s;
+}
+
+@keyframes fly {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+/* Error Number */
+.error-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 900;
+  color: #2c3e50;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Text */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.error-description {
+  font-size: 1.1rem;
+  color: #5a6c7d;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Back Home Button */
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: #6b8e6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(107, 142, 107, 0.3);
+}
+
+.back-home-btn:hover {
+  background: #5a7a5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(107, 142, 107, 0.4);
+}
+
+.arrow {
+  font-size: 1.2rem;
+  transform: rotate(45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .not-found-header {
+    height: 30vh;
+    padding: 1.5rem;
+  }
+  
+  .error-title {
+    font-size: 2.2rem;
+  }
+  
+  .nature-illustration {
+    height: 250px;
+  }
+  
+  .error-number {
+    font-size: 6rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .error-description {
+    font-size: 1rem;
+  }
+  
+  .not-found-content {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-header {
+    height: 25vh;
+    padding: 1rem;
+  }
+  
+  .error-title {
+    font-size: 1.8rem;
+  }
+  
+  .nature-illustration {
+    height: 200px;
+  }
+  
+  .error-number {
+    font-size: 4rem;
+  }
+  
+  .page-title {
+    font-size: 1.6rem;
+  }
+  
+  .back-home-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
